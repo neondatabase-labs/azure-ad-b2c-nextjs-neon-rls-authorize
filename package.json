@@ -19,7 +19,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.10.14",
     "@mui/material": "^5.10.14",
-    "@neondatabase/serverless": "github:neondatabase/serverless#release-jwt-token",
+    "@neondatabase/serverless": "^0.10.1",
     "drizzle-orm": "^0.33.0-8944ef1",
     "mysql2": "^3.11.3",
     "next": "^14.2.10",
