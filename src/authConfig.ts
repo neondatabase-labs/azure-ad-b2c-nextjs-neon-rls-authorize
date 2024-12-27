@@ -4,7 +4,7 @@ config({ path: "../.env" });
 // Config object to be passed to Msal on creation
 export const msalConfig = {
   auth: {
-    clientId: process.env.NEXT_PUBLIC_AZURE_AD_B2C_CLIENT_ID,
+    clientId: process.env.NEXT_PUBLIC_AZURE_AD_B2C_CLIENT_ID!,
     authority: "https://login.microsoftonline.com/common",
     redirectUri: "/",
     postLogoutRedirectUri: "/",

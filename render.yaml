@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: azure-ad-b2c-neon-authorize
+    runtime: node
+    plan: free
+    # Set NODE_ENV=development for build command since Render needs devDependencies to build Next.js (https://community.render.com/t/nextjs-deployment-fails-unless-devdependencies-moved-to-dependencies-in-package-json/26748)
+    buildCommand: NODE_ENV=development npm install && npm run build
+    startCommand: NODE_ENV=production npm run start
+    autoDeploy: false
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+      - key: DATABASE_URL
+        sync: false # Securely configure the database URL in Render Dashboard
+
+      - key: DATABASE_AUTHENTICATED_URL
+        sync: false # Securely configure the authenticated database URL in Render Dashboard
+
+      - key: NEXT_PUBLIC_AZURE_AD_B2C_CLIENT_ID
+        sync: false # Configure Azure AD B2C client ID in Render Dashboard
