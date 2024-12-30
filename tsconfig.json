@@ -2,7 +2,6 @@
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "types": ["bun-types"],
     "module": "es2020",
     "target": "es2020",
     "lib": ["dom", "es2020"],
